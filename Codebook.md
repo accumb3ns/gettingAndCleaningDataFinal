@@ -22,42 +22,44 @@ by Reyes-Ortiz et al.
   These signals were used to estimate variables of the feature vector for each pattern:  
   '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-    tBodyAcc-XYZ
-    tGravityAcc-XYZ
-    tBodyAccJerk-XYZ
-    tBodyGyro-XYZ
-    tBodyGyroJerk-XYZ
-    tBodyAccMag
-    tGravityAccMag
-    tBodyAccJerkMag
-    tBodyGyroMag
-    tBodyGyroJerkMag
-    fBodyAcc-XYZ
-    fBodyAccJerk-XYZ
-    fBodyGyro-XYZ
-    fBodyAccMag
-    fBodyAccJerkMag
-    fBodyGyroMag
-    fBodyGyroJerkMag
+    *tBodyAcc-XYZ
+    *tGravityAcc-XYZ
+    *tBodyAccJerk-XYZ
+    *tBodyGyro-XYZ
+    *tBodyGyroJerk-XYZ
+    *tBodyAccMag
+    *tGravityAccMag
+    *tBodyAccJerkMag
+    *tBodyGyroMag
+    *tBodyGyroJerkMag
+    *fBodyAcc-XYZ
+    *fBodyAccJerk-XYZ
+    *fBodyGyro-XYZ
+    *fBodyAccMag
+    *fBodyAccJerkMag
+    *fBodyGyroMag
+    *fBodyGyroJerkMag
 
   The set of variables that were estimated from these signals are: 
 
-    mean(): Mean value
-    std(): Standard deviation
+    *mean(): Mean value
+    *std(): Standard deviation
     ...."
 
-Impressive! In the final data set, variables take the form: variable.estimate...axis; for instance, "tBodyAcc.mean...X" is the mean of the time domain body acceleration signal in the x axis. Only mean and standard deviation estimates are retained per the instructions of the assignment.
+Impressive! In the final data set, variables take the form: variable.estimate...axis; for instance, "tBodyAcc.mean...X" is the 
+mean of the time domain body acceleration signal in the x axis. Only mean and standard deviation estimates are retained per the 
+instructions of the assignment.
 
 We also have a subject id variable (1-30), and an activity variable which can be one of the following to describe 
 the activity performed at the time of measurement:
-    WALKING
-    WALKING_UPSTAIRS
-    WALKING_DOWNSTAIRS
-    SITTING
-    STANDING
-    LAYING
+    *WALKING
+    *WALKING_UPSTAIRS
+    *WALKING_DOWNSTAIRS
+    *SITTING
+    *STANDING
+    *LAYING
 
-##Run_Analysis.R script transformations
+##run_analysis.R script transformations
 run_analysis.R begins by downloading the zip file from the UCI repository (checking of course whether the file
 and/or directory already exist!). This data is loaded into memory using read.table() and the data (x files) and numeric
 activity labels (y files) are merged for each respective data set. The subject id labels are also merged.
