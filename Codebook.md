@@ -43,7 +43,9 @@ by Reyes-Ortiz et al. They state in their features_info file that the data and v
     std(): Standard deviation
     ...."
 
-Impressive! We also have a subject id variable (1-30), and an activity variable which can be one of the following for 
+Impressive! In the final data set, variables take the form: variable.estimate...axis; for instance, "tBodyAcc.mean...X" is the mean of the time domain body acceleration signal in the x axis.
+
+We also have a subject id variable (1-30), and an activity variable which can be one of the following to describe 
 the activity performed at the time of measurement:
     WALKING
     WALKING_UPSTAIRS
@@ -59,15 +61,18 @@ activity labels (y files) are merged for each respective data set. The subject i
 
 Next, both training and test sets are merged per the instructions of the assignment, and the variable names are applied from 
 the "features.txt" file. Note here that R doesn't like exact variable names in features.txt; this is a problem in the next
-step where we use dplyr's "select" function, but I found an excellent workaround to this exact problem via Stack Overflow
+step where we use dplyr's select() function, but I found an excellent workaround to this exact problem via Stack Overflow
 thanks to user Lantana; we can use the make.names function from base R to fix the problem.
 
 Next, we want to select ONLY the measurements on the mean and standard deviation for each measurement which is 
-accomplished using the select function of dplyr.
+accomplished using the select() function of dplyr.
 
+Next, we can use cut() to apply the more descriptive activity names as factors to the numeric activity code.
 
+Finally, we can generate the desired means for each subject and each activity using group_by() and summarize_each(), 
+which produces a tidy data set in the wide format. Last, we write this summary data to a file for submission.
 
-
+Thanks for reading (and grading!), and thanks to David Hood for his invaluable guidelines on this assignment.
 
 ##References
 Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. A Public Domain Dataset
