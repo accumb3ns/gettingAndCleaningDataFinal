@@ -1,7 +1,10 @@
 #Getting and Cleaning Data Course Project Codebook
 
 This project is based on the data downloaded from the "Human Activity Recognition Using Smartphones Data Set" 
-by Reyes-Ortiz et al. They state in their features_info file that the data and variables are as follows:
+by Reyes-Ortiz et al. 
+
+# Data and Variables
+  The data set's authors state in their features_info file that the data and variables are as follows:
 
   "The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. 
   These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. 
@@ -43,7 +46,7 @@ by Reyes-Ortiz et al. They state in their features_info file that the data and v
     std(): Standard deviation
     ...."
 
-Impressive! In the final data set, variables take the form: variable.estimate...axis; for instance, "tBodyAcc.mean...X" is the mean of the time domain body acceleration signal in the x axis.
+Impressive! In the final data set, variables take the form: variable.estimate...axis; for instance, "tBodyAcc.mean...X" is the mean of the time domain body acceleration signal in the x axis. Only mean and standard deviation estimates are retained per the instructions of the assignment.
 
 We also have a subject id variable (1-30), and an activity variable which can be one of the following to describe 
 the activity performed at the time of measurement:
